@@ -1,18 +1,21 @@
 import React from "react";
+import { store } from "../../store";
 import ContactItem from "./ContactItem/ContactItem";
 import "./ContactList.css";
 
-const contactData = [
-    { name: "Name", phone: 123123, id: 0 },
-    { name: "newName", phone: 32321, id: 0 },
-];
-
+// [{}, {}] => [{}, {}, {}]
 function ContactList() {
+    let contactData = store.getState();
+
     return (
         <div className="ContactList">
             <ContactItem contacts={contactData} />
         </div>
     );
 }
+
+// Doesn't refresh list
+store.subscribe(ContactList)
+// 
 
 export default ContactList;

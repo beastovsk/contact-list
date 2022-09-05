@@ -4,17 +4,3 @@
     margin: 10px 0px;
     align-items: center;
 }
-
-button {
-    display: flex;
-    align-items: center;
-    padding: 5px 10px;
-    border-radius: 15px;
-    cursor: pointer;
-    background-color: rgb(156, 156, 156);
-    
-
-    /* Fix button size */
-    width: 100px;
-    height: 40px;
-}

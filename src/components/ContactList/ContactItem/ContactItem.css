@@ -1,3 +1,5 @@
-/* .ContactItem {
-
-} */
+.ContactItem {
+    margin: 0;
+    border-bottom: 1px solid rgba(204, 204, 204, 0.524);
+    padding: 30px;
+}

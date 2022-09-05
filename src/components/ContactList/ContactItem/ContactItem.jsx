@@ -2,13 +2,11 @@ import React from "react";
 import "./ContactItem.css";
 
 function ContactItem({ contacts }) {
-    return contacts.map((item) => {
+    return contacts.map((contact, i) => {
         return (
-            <React.Fragment>
-                <p key={item.id} className="ContactItem">
-                    {item.name}, {item.phone}
-                </p>
-            </React.Fragment>
+            <p key={contact.id} className="ContactItem">
+                {contact.name}, {contact.phone}
+            </p>
         );
     });
 }
