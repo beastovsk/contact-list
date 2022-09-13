@@ -1,4 +1,4 @@
-button {
+.nav__button {
     display: flex;
     align-items: center;
     padding: 5px 10px;

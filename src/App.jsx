@@ -1,12 +1,18 @@
+import { useState } from "react";
 import "./App.css";
 import ContactList from "./components/ContactList/ContactList";
-import Navbar from "./components/Navbar/Navbar";
-
+import NavButton from "./components/Navbar/NavButton/NavButton";
+import NavModal from "./components/Navbar/NavButton/NavModal/NavModal";
 
 function App() {
+    const [modalActive, setModalActive] = useState(true);
     return (
         <div className="App">
-            <Navbar />
+            <NavModal active={modalActive} setActive={setModalActive} />
+            <div className="Navbar">
+                <h3>Contact List</h3>
+                <NavButton openModalWindow={setModalActive} />
+            </div>
             <ContactList />
         </div>
     );

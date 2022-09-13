@@ -1,10 +1,11 @@
 import { initialState } from "../store";
 
 export const rootReducer = (state = initialState, action) => {
+
     let newUserContact = {
         name: "Artyom",
         phone: 8927121,
-        id: 2,
+        id: 4,
     };
 
     // Actions
