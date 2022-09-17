@@ -5,7 +5,8 @@ import NavButton from "./components/Navbar/NavButton/NavButton";
 import NavModal from "./components/Navbar/NavButton/NavModal/NavModal";
 
 function App() {
-    const [modalActive, setModalActive] = useState(true);
+    const [modalActive, setModalActive] = useState(false);
+    
     return (
         <div className="App">
             <NavModal active={modalActive} setActive={setModalActive} />
