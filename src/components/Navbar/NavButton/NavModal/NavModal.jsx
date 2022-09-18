@@ -1,23 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
 import "./NavModal.css";
 import { store } from "../../../../store";
 
 function NavModal({ active, setActive }) {
-    // const [data, setData] = useState({ name: "", phone: null });
-
     const addTask = () => {
         store.dispatch({
             type: "ADD_CONTACT",
-            // name: data["name"],
-            // phone: data["phone"],
-            name: name,
-            phone: phone
+            name: contactName,
+            phone: contactPhone,
         });
-        // setData({name: '', phone: null})
+        setActive(false);
     };
 
-    let name, phone
-    // console.log(data['name'])
+    let contactName, contactPhone
 
     return (
         <div
@@ -33,8 +28,7 @@ function NavModal({ active, setActive }) {
                     type="text"
                     placeholder="Name"
                     onChange={(event) => {
-                        // setData({ name: event.target.value });
-                        name = event.target.value
+                        contactName = event.target.value;
                     }}
                 />
                 <input
@@ -42,8 +36,7 @@ function NavModal({ active, setActive }) {
                     type="number"
                     placeholder="Number"
                     onChange={(event) => {
-                        // setData({ phone: event.target.value });
-                        phone = event.target.value;
+                        contactPhone = event.target.value;
                     }}
                 />
                 <button className="modal__button" onClick={addTask}>
